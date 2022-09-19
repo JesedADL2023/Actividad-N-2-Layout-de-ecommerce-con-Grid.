@@ -1,0 +1,109 @@
+html
+    {
+     box-sizing:border-box;
+    }
+    *,
+    *:before,
+    *:after
+    {
+     box-sizing:inherit;
+    }
+
+html
+    {
+     font-family: Arial, Helvetica, sans-serif
+    }
+
+body
+    {
+     margin: 0;
+    }
+
+.navbar
+    {
+     grid-area: a;  /*  Nav  */
+     text-align: center;
+     background: #1B1F21;
+     color: beige;
+    }
+
+.container
+    {
+     display: grid;
+     grid-template-columns: 15% 2fr;
+     grid-template-rows: auto auto auto;
+     grid-template-areas:               /*  Para definir   */
+     "a a"
+     "b c"
+     "d d";
+    }
+
+.aside          /*  Menú  */
+    {
+     grid-area: b;
+     display: flex;
+     flex-direction: column;
+     padding-left: 3rem;
+     background-image: radial-gradient(circle at 5.4% 50%, #00ffff 0, #39ffff 25%, #53bcf2 50%, #4e7ea0 75%, #3c4b5a 100%);
+     border-right: solid 1px #1B1F21;
+    }
+
+a
+    {
+     text-decoration: none;
+     color: black;
+    }
+
+.main               /*  Grilla  */
+    {
+    background-image: radial-gradient(circle at 5.4% 50%, #00ffff 0, #39ffff 25%, #53bcf2 50%, #4e7ea0 75%, #3c4b5a 100%);
+     grid-area: c;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 30px;
+     padding: 50px;
+}
+
+img
+    {
+     height: 12rem;
+     width:  auto;
+    }
+
+.card
+    {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     background-image: radial-gradient(circle at 50% 50%, #f7fffa 0, #ebfff4 7.14%, #ddffee 14.29%, #cdfae9 21.43%, #baf3e4 28.57%, #a4ebdf 35.71%, #8be2db 42.86%, #6cd8d8 50%, #46ced6 57.14%, #00c4d7 64.29%, #00bbd8 71.43%, #00b3db 78.57%, #00aade 85.71%, #00a3e1 92.86%, #009ce4 100%);
+     border-radius: 5px;
+     overflow: hidden;
+     box-shadow: #009ce4;
+     border: solid 2px #00c4d7;
+    }
+
+.info
+    {
+     background-color:blue;
+     color: #fff;
+     margin: 0px 100px 10px 100px;
+     padding: 10px 10px;
+     border-radius: 5px;
+     border: none;
+    }
+
+.info:hover
+    {
+     background-color: darkorange;
+    }
+
+.footer
+    {
+     grid-area: d;
+     text-align: center;
+     background-image: radial-gradient(circle at 120.71% 50%, #00ffff 0, #39ffff 25%, #53bcf2 50%, #4e7ea0 75%, #3c4b5a 100%);
+     color: darkblue;
+     height: 4rem;
+     font-family: Arial, Helvetica, sans-serif;
+    }
+
